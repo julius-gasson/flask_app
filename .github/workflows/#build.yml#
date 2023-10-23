@@ -1,6 +1,6 @@
 name: Build
 on: [push]
-jobs:
+jobs: 
   python-formatting:
     runs-on: ubuntu-latest
     steps:

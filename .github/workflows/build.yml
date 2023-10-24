@@ -24,6 +24,8 @@ jobs:
           python-version: 3.9
       - name: Install pytest
         run: pip install pytest
+      - name: install flask
+        run: pip install flask
       - name: Run unit test
         run: pytest api/*.py
   deploy-to-vercel:

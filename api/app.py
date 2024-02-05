@@ -48,7 +48,7 @@ def quiz():
     if request.method == "POST":
         user_answers = []
         return redirect(url_for("submit"))
-    return render_template("quiz.html", questions=questions)
+    return render_template("index.html", questions=questions)
 
 
 def get_score(user_answers, answers):
@@ -65,7 +65,7 @@ def submit():
         user_answer = request.form.get(f"q{i + 1}")
         user_answers.append(user_answer)
     score = get_score(user_answers, answers)
-    return render_template("submit.html", score=score)
+    return render_template("hello.html", score=score)
 
 
 def process_query(input):
